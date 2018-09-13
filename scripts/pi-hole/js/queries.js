@@ -149,7 +149,7 @@ $(document).ready(function() {
             var dnssec_status = "";
             if (data[5] === "1")
             {
-                dnssec_status = "<br><span style=\"color:green\">SECURE</span>";
+                dnssec_status = "<br><span style=\"color:blue\">SECURE</span>";
             }
             else if (data[5] === "2")
             {
@@ -172,17 +172,17 @@ $(document).ready(function() {
                 blocked = true;
                 $(row).css("color","red");
                 $("td:eq(4)", row).html( "Pi-holed"+dnssec_status );
-                $("td:eq(6)", row).html( "<button style=\"color:green; white-space: nowrap;\"><i class=\"fa fa-pencil-square-o\"></i> Whitelist</button>" );
+                $("td:eq(6)", row).html( "<button style=\"color:blue; white-space: nowrap;\"><i class=\"fa fa-pencil-square-o\"></i> Whitelist</button>" );
             }
             else if (data[4] === "2")
             {
-                $(row).css("color","green");
+                $(row).css("color","blue");
                 $("td:eq(4)", row).html( "OK <br class='hidden-lg'>(forwarded)"+dnssec_status );
                 $("td:eq(6)", row).html( "<button style=\"color:red; white-space: nowrap;\"><i class=\"fa fa-ban\"></i> Blacklist</button>" );
             }
             else if (data[4] === "3")
             {
-                $(row).css("color","green");
+                $(row).css("color","blue");
                 $("td:eq(4)", row).html( "OK <br class='hidden-lg'>(cached)"+dnssec_status );
                 $("td:eq(6)", row).html( "<button style=\"color:red; white-space: nowrap;\"><i class=\"fa fa-ban\"></i> Blacklist</button>" );
             }
@@ -198,7 +198,7 @@ $(document).ready(function() {
                 blocked = true;
                 $(row).css("color","red");
                 $("td:eq(4)", row).html( "Pi-holed <br class='hidden-lg'>(blacklist)" );
-                $("td:eq(6)", row).html( "<button style=\"color:green; white-space: nowrap;\"><i class=\"fa fa-pencil-square-o\"></i> Whitelist</button>" );
+                $("td:eq(6)", row).html( "<button style=\"color:blue; white-space: nowrap;\"><i class=\"fa fa-pencil-square-o\"></i> Whitelist</button>" );
             }
             else
             {
